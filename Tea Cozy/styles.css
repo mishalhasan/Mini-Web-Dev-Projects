@@ -1,0 +1,172 @@
+/* Universal Styles */ 
+
+html,body{
+    margin-top:0;
+    padding-top:0; 
+}
+
+body, a {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    text-align: center;  
+    opacity: 0.9;
+
+}
+
+/* header */
+
+header{
+
+    background-color: black;
+    opacity: 1;
+    z-index: 1;
+    position: fixed;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+header img {
+
+    margin-left: 10px;
+    height: 50px;
+}
+
+/* nav */
+
+nav ul li {
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav ul li a{
+
+    text-decoration: underline;
+}
+
+nav ul{
+    margin-right: 10px;
+}
+
+/* main */ 
+
+main{
+
+    background-image: url("imgs/img-mission-background.jpeg");
+   
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: 1200px 700px;
+    height: 700px;
+    padding-top: 69px;
+    padding-bottom: 69px;
+
+
+}
+
+ #mission{
+
+    /* width: 100%; 
+    margin: 0 auto; */
+    background-color: black;
+    position: relative;
+    top: 36%;
+
+   
+}
+
+
+
+
+/* Section: Tea of the Month */ 
+
+.container1{
+
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 69px; 
+
+
+}
+.container1 .item img{
+
+    height: 200px;
+    width: 300px; 
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+.container1 .item {
+    
+ display: flex;
+ width: 357px;
+ flex-wrap: wrap;    
+ justify-content: center;
+
+}
+
+
+/* Section: Locations */ 
+
+#locations{
+
+    height: 700px;
+    background-image: url(imgs/img-locations-background.jpeg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 1200px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#locations h2{
+    padding-bottom: 15px;
+}
+
+.container2{
+
+    display: flex;
+    justify-content: center;
+
+    
+}
+.container2 .item { 
+
+    opacity: 1;
+    width: 300px;
+    margin-right: 40px;
+    background-color: black;
+
+}
+
+.container3{
+
+    background-color: black; 
+    height: 200px;
+}
+
+.container3 h2{
+
+    padding-top: 0;
+    margin-top: 0; 
+}
+
+/* footer */ 
+
+footer{
+
+    padding-left: 20px;
+    text-align: left;    
+}
