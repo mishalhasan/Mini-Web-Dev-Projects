@@ -1,0 +1,275 @@
+/* Universal Styles*/ 
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Merriweather&family=Raleway:ital@1&display=swap');
+html{
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #eae7d9;
+}
+
+main {
+    position: relative;
+    /*top: 1.8rem; /*  header offset  */
+}
+
+body{
+    margin: 0;
+}
+
+h2{
+    font-family: 'Ibarra Real Nova', serif; 
+    padding: 2.1875rem 3.125rem; /*35px 30px*/ 
+    margin: 0;
+    display: block;
+    font-size: 3.125rem; /* 50px */ 
+
+}
+
+h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+/* Header */ 
+
+header{
+    height: 5rem; /* 80px*/
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f222e;
+}
+
+header .logo{
+    width: 25%; 
+    height: auto;
+    overflow: hidden;
+}
+
+header .logo img{
+    max-width: 100%; 
+    height: auto;
+    display: block;
+} 
+
+header .navbar {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.navbar a{
+    color: #fff5d0;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 1.8rem;
+    position: relative;
+}
+
+.navbar a:hover{
+    color: #ba3622;     
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #ba3622;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+  .navbar a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Main */ 
+
+/** Mission **/ 
+
+.mission{
+    padding: 8%;
+    background-image: url('images/ruan-richard-rodrigues-sT1sEvYUjwU-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    background-color: rgba(200,100,0,.5);
+    background-blend-mode: multiply;  
+}
+.mission .content{
+    background-color: transparent;
+    text-align: center;
+}
+
+.mission .content h4{
+    font-size: 2rem;
+}
+
+.mission .content h2, .mission .content h4{
+color: #fff5d0;  
+font-weight: 900;
+text-align: center;
+} 
+
+
+/** Portfolio **/ 
+
+#portfolio .content{
+    background-color: #2a3b47;
+    padding-bottom: 32px;
+}
+
+#portfolio .content h2{
+    color: #fff5d0;
+}
+
+#portfolio .designs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3%;
+}
+
+.l-designs{ 
+    flex-direction: column;
+    display: flex;
+}
+
+.p-designs .design {
+    width: 400px;
+    height: 534px;
+    overflow: hidden; 
+    border: 3px solid white; 
+}
+
+.l-designs .design{
+    width: 400px;
+    height: 265px;
+    overflow: hidden; 
+    border: 3px solid white; 
+    border-left: none;
+    flex-grow: 1;  
+}
+
+.l-designs :nth-child(3), .l-designs :nth-child(4){
+    border-top: none;
+}
+
+.design img{
+    max-width: 100%;
+    height: auto;
+    display: block; 
+}
+
+
+/** Team **/ 
+#team-container{
+    background-color: #a8b4b4; 
+
+    /* background-image: linear-gradient(to bottom right, #a8b4b4 , #77848c); */
+    
+
+}
+#team-container h2{
+
+    color: #0f222e; 
+}
+
+#team-container .team{
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /* background-color: #0f222e; */
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    /* border: 3px solid #0f222e; */
+
+}
+
+#team-container .team h3, #team-container .team p{
+    text-align: center;
+}
+
+#team-container .team .row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+
+#team-container .team .row:first-child {
+    /* margin-top: 2%;  */
+    margin-bottom: 5%;
+}
+#team-container .team .row:nth-child(2) {
+    gap: 32px;
+}
+
+
+#team-container .teammate{
+/*     540x505 */ 
+    width: 28.3%; 
+    max-width: 539px;
+    /* height: 22.5rem; /*360px*/  
+    overflow: hidden;   
+    background-color: #fff6cf;
+    /* border: 3px solid #a8b4b4;   */
+
+}
+
+#team-container .teammate img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/** Contact **/
+.contact{
+    margin-bottom: 6%;
+}
+
+.contact .contactDeets{
+    
+    width: 100%;
+}
+
+.contact h4{
+    margin-bottom: 2.25%;
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact h4:first-child{
+
+    margin-top: 0;
+}
+
+ .contact h2{
+    color: #2a3b47;
+
+}
+
+/** Copyright **/ 
+
+.copyright {
+    background-color: #0f222e;
+    margin: 0%;
+    padding: 0.5% 0%;
+
+}
+.copyright h5{
+    text-align: right;
+    margin: 1% 2%;
+    color: #fff6cf;
+}
