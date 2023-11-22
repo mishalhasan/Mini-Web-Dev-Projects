@@ -140,26 +140,142 @@
     100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
   } 
   
-  /*Section */ 
+  /*Main Content */
   
+  main{
+
+     display: grid;
+/*
+    grid-template-areas: "about-us about-us about-us about-us about-us about-us "
+                          "cr1-img cr1-img cr1-img cr1-txt cr1-txt cr1-txt"   
+                          "cr2-txt cr2-txt cr2-txt cr2-img cr2-img cr2-img" 
+                          "membership membership membership membership membership membership"  
+                          "cr3-pkg1 cr3-pkg1 cr3-pkg2 cr3-pkg2 cr3-pkg3 cr3-pkg3"
+                          "cr4-disc cr4-disc cr4-disc cr4-disc cr4-disc cr4-disc"  
+                          "events events events events events events"
+                          "cr5-ev1 cr5-ev1 cr5-ev1 cr5-ev2 cr5-ev2 cr5-ev2"
+                          "cr6-ev3 cr6-ev3 cr6-ev3 cr5-ev4 cr5-ev4 cr5-ev4"
+                          "cr7-loc cr7-loc cr7-loc cr7-desc cr7-desc cr7-desc"
+                          "cr8-time cr8-time cr8-time cr8-desc cr8-desc cr8-desc"; */
+
+    grid-template-areas: "about-us"
+                         "membership"
+                         "events"
+                         "play-now";
+                  
+  }
+
+
+
+  /** General Main Content Styling **/ 
+
+  .sectionTitle{
+
+  font-size: 2.25rem;
+  font-weight: bold; 
+  color: #4c6277;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif; 
+
+  padding-bottom: 1.5%;
+
+
+  
+  }
+
+  main section{
+    padding-top: 1.5%; 
+    padding-bottom: 1.5%;
+
+  }
+  
+  main section:nth-child(2n){
+
+    background-color: #0a1321;
+    color: whitesmoke;
+
+  }
+
   /** About Us**/ 
+
+  #aboutUs {
+
+    grid-area: about-us;
+
+    }
+
+   #aboutUs .scontent{
+
+    display: grid;
+    /* grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr); */
+
+    grid-template: repeat(2,1fr) / repeat(2,1fr);
+    column-gap: 10px;    
+    row-gap: 20px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+
+   }
+
+   #aboutUs .desc{
+
+    align-self: center;
+    justify-self: center;
+
+    line-height: 1.5rem;
+
+   }
+
+   #aboutUs img{
+
+    align-self: center;
+    justify-self: center;
+   }
 
   #aboutUs .imgContainer{
 
-    width: 20%;
-    height: 200px;
+    width: 50%;
+    height: 190px;
     overflow: hidden;
+
+    align-self: center;
+    justify-self: center;
 
   }
 
   #aboutUs .imgContainer img{
 
-    max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    width: auto;
     display: block; 
 
   }
+
+  /** Memberships **/ 
+
+  #membership{
+
+    grid-area: membership;
+    
+  }
+
+
+  /** Events **/ 
+
+  #events{
+
+   grid-area: events;
+  }
+
   
+  /** Play Now **/ 
+
+
+  #playNow{
+    grid-area: play-now;
+
+  }
   
   /*Footer*/ 
   
