@@ -6,6 +6,7 @@
 
     display: grid;
     grid-template-rows: max-content 1fr; 
+    grid-template-columns: 1fr 1fr;
 
 
 
@@ -144,7 +145,7 @@
   
   main{
 
-     display: grid;
+     /* display: grid; */
 /*
     grid-template-areas: "about-us about-us about-us about-us about-us about-us "
                           "cr1-img cr1-img cr1-img cr1-txt cr1-txt cr1-txt"   
@@ -157,11 +158,11 @@
                           "cr6-ev3 cr6-ev3 cr6-ev3 cr5-ev4 cr5-ev4 cr5-ev4"
                           "cr7-loc cr7-loc cr7-loc cr7-desc cr7-desc cr7-desc"
                           "cr8-time cr8-time cr8-time cr8-desc cr8-desc cr8-desc"; */
-
+/* 
     grid-template-areas: "about-us"
                          "membership"
                          "events"
-                         "play-now";
+                         "play-now"; */
                   
   }
 
@@ -200,7 +201,7 @@
 
   #aboutUs {
 
-    grid-area: about-us;
+    /* grid-area: about-us; */
 
     }
 
@@ -216,12 +217,13 @@
     padding-left: 1.5%;
     padding-right: 1.5%;
 
+    justify-items: center;
+    align-items: center;
+
+
    }
 
    #aboutUs .desc{
-
-    align-self: center;
-    justify-self: center;
 
     line-height: 1.5rem;
 
@@ -229,8 +231,8 @@
 
    #aboutUs img{
 
-    align-self: center;
-    justify-self: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
    }
 
   #aboutUs .imgContainer{
@@ -256,27 +258,295 @@
 
   #membership{
 
-    grid-area: membership;
+    /* grid-area: membership; */
     
   }
 
+  #membership .scontent{
+
+    display: grid;
+    /* grid-template-areas: "mpkg1 mpkg2 mpkg3"
+                          "discl discl discl";
+       grid-template-columns: repeat(3,1fr);
+ */
+    grid-template-areas: "mpkg1 mpkg2 mpkg3"
+                         "discl discl discl";
+    grid-template-columns: repeat(3,1fr);
+    
+    
+    justify-content: center;
+
+    column-gap: 10px;    
+    row-gap: 20px;
+    padding-left: 1.5%;
+    padding-right: 1.5%; 
+
+    margin: 1.5%;
+
+  }
+
+  #m1{
+
+    grid-area: mpkg1;
+  }
+
+  #m2{
+    grid-area: mpkg2;
+  }
+
+  #m3{
+    grid-area: mpkg3;
+  }
+
+  #membership .m-package{
+    border: solid whitesmoke;
+    display: flex;
+    align-items: center; 
+    flex-direction: column; 
+  
+  }
+
+  .m-package ul {
+    list-style: circle;
+    list-style-position: inside;
+    padding-left: 2%; 
+    padding-bottom: 1.5%; 
+    padding-top: 1.5%;
+  }
+
+  .m-package li{
+
+    line-height: 1.5rem;
+  }
+
+  .m-package h3{
+
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: normal;  
+    padding-top: 10%;
+    padding-bottom: 2.5%;
+
+  }
+
+  .m-package .price{
+
+    border: solid whitesmoke;
+
+    font-size: 1.2rem;
+    text-align: center;
+    width: fit-content;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+
+  }
+
+  #membership .c-symb{
+
+   /* grid-area: csymb;  */
+   justify-self: center;
+   align-self: center;
+
+   font-size: 1.5rem;
+  }
+
+  #membership .c-txt{
+
+   /* grid-area: ctxt; */
+  }
+
+  #membership .disclaimer{
+
+      grid-area: discl; 
+      display: grid;
+      /* grid-template-columns: 2% 98%; */
+      grid-template-areas: "csymb ctext";
+      column-gap: 1%;
+
+     /* grid-area: discl;
+     display: flex; */
+     
+
+  }
 
   /** Events **/ 
 
   #events{
 
-   grid-area: events;
+   /* grid-area: events; */
   }
 
+  #events .scontent{
+
+    display: grid;
+    grid-template-areas: " ev1 ev2 "  
+                         " ev3 ev4 "; 
+    grid-template-columns: repeat(2,400px);
+
+   /* justify-items: center; 
+     align-items: center;*/
+      /* justify-content: center;  */
+      justify-content: center; 
+    /* align-content: space-between;  */
+
+    column-gap: 20px;    
+    row-gap: 20px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+
+    margin: 1.5%;
+  }
+
+  #events .event{
+
+    /* padding-left: 2%; 
+    padding-right: 2%;  */
+
+
+    border: 1.5px solid black;
+
+    /* display: flex;
+    flex-direction: column;   */
+
+
+  }
+
+  #events .ename, #events .eDate{
+
+    text-align: center;  
+  }
+
+  #events .ename{
+
+    padding-top: 10%;
+    padding-bottom: 25%; 
+
+    font-size: 1.75rem;
+    font-weight: normal;  
+    justify-self: center;
+  }
+
+  #events .eDate{
+
+    /* margin-top: 25%;  */
+
+    padding-top: 5%;
+    padding-bottom: 5%;  
+
+    border-top: 1.5px solid black;
+    justify-self: flex-end;
+
+  }
+
+  #events .ename{
+
+    background-color: aliceblue;
+
+  }
+  
   
   /** Play Now **/ 
 
 
-  #playNow{
-    grid-area: play-now;
+  #playNow .scontent{
 
+    /* grid-area: play-now; */
+
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    display: grid;
+    grid-template-areas: " loc_title map "  
+                         " t_title times ";  
+   
+    grid-template-columns: repeat(2,max-content); 
+
+    /* grid-template-areas: " loc"  
+                         " time"; 
+    grid-template-columns: 50%; */
+
+    justify-content: center;
+    column-gap: 5%;
+    row-gap: 5%; 
+  }
+
+  #playNow h3{
+
+    font-size: 2vw;
+    font-family: Arial, Helvetica, sans-serif; 
+  }
+
+  #playNow .loc{
+    grid-area: loc_title;
+
+    
+    /* display: flex; 
+    justify-content: space-between;
+    align-content: center; */
+  }
+
+  #playNow iframe{
+
+    grid-area: map;
+
+  }
+
+  #playNow .time{
+    grid-area: t_title;
+
+    /* display: flex;
+    justify-content: space-between; */
+  }
+
+  #playNow ul{
+
+    grid-area: times;
   }
   
   /*Footer*/ 
+
+  footer{
+    margin: 1.5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .copyright {
+
+    font-size: 15px;    
+  }
+
+  footer .social{
+
+  }
+  
+  footer .social > a {
+    font-size:12x;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  footer .social > a:hover {
+    opacity:0.9;
+  }
   
   
