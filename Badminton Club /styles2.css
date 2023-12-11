@@ -24,10 +24,11 @@
 
 /** Comany Logo**/ 
 #c-logo{
-    grid-area: c-logo;
+    /* grid-area: c-logo; */
 }
 #comp-logo{
 
+    grid-area: c-logo;
     width: 35vw;
     height: auto;
 }
@@ -53,6 +54,24 @@
 
   .menu ul a:hover{
     text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    #main-top-bg{
+
+      grid-template-areas: "c-logo"
+                            "menu"
+                            "playButton"; 
+      grid-template-rows: max-content max-content 1fr; 
+      grid-template-columns: 1fr; 
+
+    }
+    
+    #comp-logo{ width: 250px; justify-self: center;}
+    .menu ul a{ font-size: 1rem; font-family: Georgia;}
+
+
   }
 
   /*Section */ 
@@ -82,7 +101,7 @@
     -webkit-border-radius: 10;
     -moz-border-radius: 10;
     border-radius: 10px;
-    font-family: Georgia;
+    font-family:'Times New Roman', Times, serif; 
     color: #ffffff;
     /* font-size: 20px; */
     font-size: 1.55rem;
