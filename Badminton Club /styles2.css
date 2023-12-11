@@ -5,10 +5,8 @@
 #main-top-bg{
 
     display: grid;
-    grid-template-rows: max-content 1fr; 
-    grid-template-columns: 1fr 1fr;
-
-
+    grid-template-rows: max-content 1fr; /**max-content to control the size of the first row to be small*/
+    grid-template-columns: 1fr 1fr; 
 
     background-image: url('resources/banner_bg.jpg');
     background-repeat: no-repeat;
@@ -142,30 +140,6 @@
   } 
   
   /*Main Content */
-  
-  main{
-
-     /* display: grid; */
-/*
-    grid-template-areas: "about-us about-us about-us about-us about-us about-us "
-                          "cr1-img cr1-img cr1-img cr1-txt cr1-txt cr1-txt"   
-                          "cr2-txt cr2-txt cr2-txt cr2-img cr2-img cr2-img" 
-                          "membership membership membership membership membership membership"  
-                          "cr3-pkg1 cr3-pkg1 cr3-pkg2 cr3-pkg2 cr3-pkg3 cr3-pkg3"
-                          "cr4-disc cr4-disc cr4-disc cr4-disc cr4-disc cr4-disc"  
-                          "events events events events events events"
-                          "cr5-ev1 cr5-ev1 cr5-ev1 cr5-ev2 cr5-ev2 cr5-ev2"
-                          "cr6-ev3 cr6-ev3 cr6-ev3 cr5-ev4 cr5-ev4 cr5-ev4"
-                          "cr7-loc cr7-loc cr7-loc cr7-desc cr7-desc cr7-desc"
-                          "cr8-time cr8-time cr8-time cr8-desc cr8-desc cr8-desc"; */
-/* 
-    grid-template-areas: "about-us"
-                         "membership"
-                         "events"
-                         "play-now"; */
-                  
-  }
-
 
 
   /** General Main Content Styling **/ 
@@ -179,9 +153,8 @@
   font-family:Arial, Helvetica, sans-serif; 
 
   padding-bottom: 1.5%;
+  padding-top: 1.5%;
 
-
-  
   }
 
   main section{
@@ -194,6 +167,26 @@
 
     background-color: #0a1321;
     color: whitesmoke;
+
+  }
+
+  main .scontent{
+
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    margin: 1.5%;
+
+
+  }
+
+
+  @media only screen and (max-width: 600px) {
+
+    .sectionTitle{
+
+      font-size: 2rem;
+    }
+
 
   }
 
@@ -214,14 +207,36 @@
     grid-template: repeat(2,1fr) / repeat(2,1fr);
     column-gap: 10px;    
     row-gap: 20px;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    /* padding-left: 1.5%;
+    padding-right: 1.5%; */
+    /* margin: 1.5%; */
+
 
     justify-items: center;
     align-items: center;
 
+   }
+
+   @media only screen and (max-width: 600px) {
+
+    #aboutUs .scontent{
+
+     grid-template: repeat(4,1fr) / 1fr; 
+     /* column-gap: 0px;
+     row-gap: 0px; */
+
+    }
+
+    #aboutUs .scontent #desc1{ order: 1; }
+
+    #aboutUs .scontent #img1{ order: 2; width: 300px; height: 225px; } 
+
+    #aboutUs .scontent #desc2{ order: 3; } 
+
+    #aboutUs .scontent #img2{ order: 4; width: 300px; height: 225px; }
 
    }
+
 
    #aboutUs .desc{
 
@@ -235,7 +250,7 @@
 
    }
 
-  #aboutUs .imgContainer{
+  /* #aboutUs .imgContainer{
 
     width: 50%;
     height: 190px;
@@ -252,7 +267,7 @@
     width: auto;
     display: block; 
 
-  }
+  } */
 
   /** Memberships **/ 
 
@@ -281,7 +296,7 @@
     padding-left: 1.5%;
     padding-right: 1.5%; 
 
-    margin: 1.5%;
+    /* margin: 1.5%; */
 
   }
 
@@ -398,10 +413,34 @@
 
     column-gap: 20px;    
     row-gap: 20px;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    /* padding-left: 1.5%;
+    padding-right: 1.5%; */
 
-    margin: 1.5%;
+    /* margin: 1.5%; */
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    #events .scontent{
+
+      grid-template-areas: "ev1" 
+                           "ev2 "  
+                           "ev3" 
+                           "ev4 "; 
+
+      grid-template-columns: 315px;
+      grid-template-rows: repeat(4, 1fr);
+      /* align-items: center; */
+
+    }
+
+    #events .ename{
+
+      font-size: 1.25rem;
+
+
+    }
+
   }
 
   #events .event{
@@ -459,8 +498,8 @@
 
     /* grid-area: play-now; */
 
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    /* padding-left: 1.5%;
+    padding-right: 1.5%; */
     padding-top: 2%;
     padding-bottom: 2%;
 
@@ -477,6 +516,25 @@
     justify-content: center;
     column-gap: 5%;
     row-gap: 5%; 
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    #playNow .scontent{
+
+    grid-template-areas: "loc_title"
+                          "map"  
+                          "t_title"   
+                          "times "; 
+
+    }
+
+    #playNow iframe{
+
+      width: 300px;
+      height: 225px;
+
+    }
   }
 
   #playNow h3{
