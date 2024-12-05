@@ -43,10 +43,12 @@
 
   .menu ul{
     display: flex;
-    justify-content:space-around;
-    position: sticky;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-right: 2rem;
+    /* position: sticky;
     top: 0;
-    left: 0; 
+    left: 0;  */
   }
 
   .menu ul a{
@@ -76,6 +78,23 @@
 
 
   }
+  @media only screen and (max-width: 633px) {
+    .menu {
+      display: flex;
+      justify-content: center;
+    }
+    .menu ul {
+      flex-wrap: nowrap;
+      justify-content: center;
+      padding-right: 0;
+    }
+  }
+  @media only screen and (max-width: 685px) {
+    .menu ul a {
+      font-size: 1.2rem;
+    }
+  }
+
 
   @media only screen and (min-width: 1600px) {
         
@@ -602,6 +621,17 @@
     
   }
 
+  @media only screen and (min-width: 1600px) {
+
+    main #events .scontent{
+
+      grid-template-columns: repeat(2,700px);
+
+    }
+
+
+  }
+
   #events .event{
 
     /* padding-left: 2%; 
@@ -610,8 +640,8 @@
 
     border: 1.5px solid black;
 
-    /* display: flex;
-    flex-direction: column;   */
+    display: flex;
+    flex-direction: column;  
 
 
   }
@@ -722,6 +752,18 @@
     padding-bottom:90%;
     position:relative;
     height:0; */
+
+  }
+
+  @media only screen and (min-width: 1600px) {
+
+    #playNow .scontent .loc_map{
+
+      width:700px;
+      height:500px; 
+
+    }
+
 
   }
 
